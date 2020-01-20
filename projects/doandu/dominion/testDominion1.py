@@ -35,5 +35,13 @@ trash = []
 #Costruct the Player objects
 players = testUtility.getPlayers(player_names)
 
+
+#ITERATION TO EXPLORE TEST SCENERIOS GOES HERE
+# ATTEMPT TO CHANGE: We redefined the dictionary so that it will act as a Dominion Curse Card; we also reset the card quanity to one
+# Expected Results: The Province should change into a curse card and should be counted as a (-1)VP
+# ACTUAL RESULT: The Game shows a province card at one, but will not register that there is a province card when the user buys the game. This prevents the players from 
+# winning and completing the game once province is bought.
+supply["Province"]=[Dominion.Curse()]*1
+
 #Play the game
 testUtility.playGame(supply_order, supply, players, trash)

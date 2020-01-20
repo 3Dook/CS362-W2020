@@ -35,5 +35,21 @@ trash = []
 #Costruct the Player objects
 players = testUtility.getPlayers(player_names)
 
+
+#ITERATION TO EXPLORE TEST SCENERIOS GOES HERE
+# ATTEMPT TO CHANGE: In any situation where defaultDict fails to initilize, then supply would tecninically be added as below
+# Expected Results: This should bug out the program and only display what is passed
+# ACTUAL RESULT: The game only display what was passed through the dictionary via the supply2 Parameter.
+
+supply2 = {}
+supply2["Copper"]=[Dominion.Copper()]*(60-len(player_names)*7)
+supply2["Silver"]=[Dominion.Silver()]*40
+supply2["Gold"]=[Dominion.Gold()]*30
+supply2["Estate"]=[Dominion.Estate()]*nV
+supply2["Duchy"]=[Dominion.Duchy()]*nV
+supply2["Province"]=[Dominion.Province()]*nV
+supply2["Curse"]=[Dominion.Curse()]*nC
+
 #Play the game
-testUtility.playGame(supply_order, supply, players, trash)
+#NOTE TO SELF*** we submited another parameter as supply2 not supply. 
+testUtility.playGame(supply_order, supply2, players, trash)
