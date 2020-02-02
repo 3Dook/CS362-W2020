@@ -4,8 +4,8 @@ import Dominion
 class TestCard:
     def setUp(self):
         self.player_name = testUtility.getPlayerNames()
-        self.nV = testUtility.getNumberCurse(self.player_name)
-        self.nC = testUtility.getNumberVictory(self.player_name)
+        self.nC = testUtility.getNumberCurse(self.player_name)
+        self.nV = testUtility.getNumberVictory(self.player_name)
         self.box = testUtility.getBoxes(self.nV)
         self.supply_order = testUtility.getSupplyOrder()
 
