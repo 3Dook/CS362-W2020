@@ -145,4 +145,4 @@ class TestAssignment:
         #callfunction again to check for void
         newAssignment.assign_grade(overGrade)
         #assert
-        assert newAssignment.grade == -1
+        assert newAssignment.grade == None
